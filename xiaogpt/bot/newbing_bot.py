@@ -7,6 +7,10 @@ from EdgeGPT import Chatbot, ConversationStyle
 from xiaogpt.bot.base_bot import BaseBot
 from xiaogpt.utils import split_sentences
 
+import os
+os.environ["http_proxy"] = "http://127.0.0.1:7890"
+os.environ["https_proxy"] = "http://127.0.0.1:7890"
+
 _reference_link_re = re.compile(r"\[\d+\]: .+?\n+")
 
 

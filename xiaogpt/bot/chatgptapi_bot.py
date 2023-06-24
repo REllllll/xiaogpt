@@ -6,6 +6,9 @@ from rich import print
 from xiaogpt.bot.base_bot import BaseBot
 from xiaogpt.utils import split_sentences
 
+import os
+os.environ["http_proxy"] = "http://127.0.0.1:7890"
+os.environ["https_proxy"] = "http://127.0.0.1:7890"
 
 class ChatGPTBot(BaseBot):
     default_options = {"model": "gpt-3.5-turbo-0613"}

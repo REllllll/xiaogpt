@@ -4,6 +4,9 @@ from rich import print
 from xiaogpt.bot.base_bot import BaseBot
 from xiaogpt.utils import split_sentences
 
+import os
+os.environ["http_proxy"] = "http://127.0.0.1:7890"
+os.environ["https_proxy"] = "http://127.0.0.1:7890"
 
 class GPT3Bot(BaseBot):
     def __init__(self, openai_key, api_base=None, proxy=None):
